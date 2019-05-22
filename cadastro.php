@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+
 if(isset($_POST['nome']) && empty($_POST['nome']) == false && isset($_POST['senha']) && empty($_POST['senha']== false)){
 	$nome = addslashes($_POST['nome']);
 	$senha = md5(addslashes($_POST['senha']));

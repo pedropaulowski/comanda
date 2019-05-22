@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-unset($_SESSION['comanda']);
+unset($_SESSION['id_user']);
 header("Location: login.php");
 exit;
 ?>

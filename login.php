@@ -14,7 +14,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
 		//fazendo a sessão
 		$sql = $sql->fetch();
 
-		$_SESSION['comanda']=$sql['id_user'];
+		$_SESSION['id_user']=$sql['id_user'];
 
 		header("Location:usuario.php");
 
