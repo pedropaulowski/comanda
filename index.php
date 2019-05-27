@@ -3,8 +3,6 @@ session_start();
 require 'config.php';
 
 
-
-
 if(isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])){
 	$id = $_SESSION['id_user'];
 
