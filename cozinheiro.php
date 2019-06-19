@@ -22,11 +22,12 @@ header("Refresh: 5; url = cozinheiro.php");
 				<th>Pedidos</th>
 				<th>Mesa</th>
 				<th>Hora</th>
+				<th>OBS</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php
-		 	$sql = "SELECT * FROM pedidos ORDER BY hora DESC";
+		 	$sql = "SELECT * FROM pedidos ORDER BY hora DESC LIMIT 10";
 		 	$sql = $pdo->query($sql);
 		 	if ($sql->rowCount()>0){
 		 		foreach ($sql->fetchAll() as $pedido) {
@@ -34,6 +35,7 @@ header("Refresh: 5; url = cozinheiro.php");
 		 			echo '<td>'.$pedido['pedidos'].'</td>';
 		 			echo '<td>'.$pedido['mesa'].'</td>';
 		 			echo '<td>'.$pedido['hora'].'</td>';
+		 			echo '<td><b>'.$pedido['obs'].'</b></td>';
 		 			echo '</tr>';
 		 		}
 		 	}
@@ -41,5 +43,5 @@ header("Refresh: 5; url = cozinheiro.php");
 			?>
 		</tbody>
 	</table>
-	<a href="sair.php">Sair</a>
+	<a href="sair.php">Sair</a><br/>
 </div>

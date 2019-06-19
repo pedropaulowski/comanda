@@ -14,6 +14,7 @@ if(isset($_POST['nome']) && empty($_POST['nome']) == false && isset($_POST['senh
 
 }
 ?>
+Usuário não cadastrado, cadastre-se agora!
 <form method="POST">
 	Nome:<br/>
 	<input type="text" name="nome"/><br/><br/>

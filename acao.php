@@ -3,9 +3,9 @@ session_start();
 require 'config.php';
 
 //preciso fazer essa ação
-if(isset($_POST['mesa']) ){
-	$mesa = addslashes($_POST['mesa']);
-	$pedidos = addslashes($_POST['pedidos']);
+if(isset($_GET['mesa']) ){
+	$mesa = addslashes($_GET['mesa']);
+	$pedidos = $_GET['produto[]'];
 	$id_user = $_SESSION['id_user'];
 
 	$sql = $pdo->prepare("INSERT INTO pedidos SET pedidos = :pedidos, mesa = :mesa, hora = NOW(), id_user = :id_user");
@@ -17,6 +17,8 @@ if(isset($_POST['mesa']) ){
 	header("Location:garcom.php");
 	
 }
+
+	header("Location:garcom.php");
 
 
 ?>
